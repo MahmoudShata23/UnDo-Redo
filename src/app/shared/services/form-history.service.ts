@@ -1,3 +1,8 @@
+/**
+ * ? it's another way to state management
+ * ! I don't use this way 
+ */
+
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -9,7 +14,7 @@ export class FormHistoryService {
   private currentState: any;
 
   saveState(state: any): void {
-    debugger
+
     if (this.currentState) {
       this.history.push(this.currentState);
     }
@@ -18,7 +23,7 @@ export class FormHistoryService {
   }
 
   undo(): any {
-    debugger
+
     if (this.history.length > 0) {
       this.future.push(this.currentState);
       this.currentState = this.history.pop();
@@ -27,7 +32,7 @@ export class FormHistoryService {
   }
 
   redo(): any {
-    debugger
+
     if (this.future.length > 0) {
       this.history.push(this.currentState);
       this.currentState = this.future.pop();
