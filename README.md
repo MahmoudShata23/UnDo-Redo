@@ -25,3 +25,19 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Implementation Details
+
+`Form Setup`: Created a reactive form with multiple input fields.
+`Undo/Redo Buttons`: Added buttons for Undo and Redo actions.
+`State Management`: Used stacks to maintain the history of changes.
+`Undo/Redo Actions`: Implemented functions to handle Undo and Redo actions.
+`User Experience`: Provided visual feedback for Undo/Redo actions.
+
+## Testing
+
+`Initial State`: Verify the form initializes correctly.
+`Change Tracking`: Make changes to the form and ensure they are tracked.
+`Undo Action`: Click the Undo button and verify the form reverts to the previous state.
+`Redo Action`: Click the Redo button and verify the form reverts to the state before the Undo action.
+`Button States`: Ensure the Undo button is disabled when there are no changes to undo and the Redo button is disabled when there are no changes to redo.
