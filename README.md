@@ -26,6 +26,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
+## Used packages
+
+`angular/Cli ==> 18`,
+`primng`,
+`ng-bootstrap`,
+
 ## Implementation Details
 
 `Form Setup`: Created a reactive form with multiple input fields.
@@ -40,4 +46,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 `Change Tracking`: Make changes to the form and ensure they are tracked.
 `Undo Action`: Click the Undo button and verify the form reverts to the previous state.
 `Redo Action`: Click the Redo button and verify the form reverts to the state before the Undo action.
-`Button States`: Ensure the Undo button is disabled when there are no changes to undo and the Redo button is disabled when there are no changes to redo.
+`Button States`: Ensure the Undo button is disabled when there are no changes to undo and the Redo button is disabled when there are no changes to redo , Ensure the submit button is disabled when there are invalid inputs and when submit reset form .

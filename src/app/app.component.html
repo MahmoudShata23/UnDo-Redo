@@ -51,11 +51,12 @@
 
       <div class="d-flex justify-content-center w-100 m-3">
         <div class="d-flex justify-content-between w-75">
-          <button type="button" pButton (click)="undo()" [disabled]="currentIndex <= -1">Undo</button>
-          <button type="button" pButton (click)="redo()"
-            [disabled]="currentIndex >= formHistory.length - 1">Redo</button>
-          <button type="submit" pButton class="p-button-success" label="Submit" (click)="onSubmit()"
-            [disabled]="userForm.invalid"></button>
+          <button type="button" pButton severity="warning" [raised]="currentIndex <= -1" icon="pi pi-replay"
+            (click)="undo()" [disabled]="currentIndex <= -1">Undo</button>
+          <button type="button" pButton [raised]="currentIndex >= formHistory.length - 1" icon="pi pi-refresh"
+            (click)="redo()" [disabled]="currentIndex >= formHistory.length - 1">Redo</button>
+          <p-button type="submit" severity="success" [raised]="true" icon="pi pi-check" label="Submit"
+            (click)="onSubmit()" [disabled]="userForm.invalid"></p-button>
         </div>
       </div>
     </userForm>
